@@ -1,0 +1,17 @@
+{
+    "background_color": "white",
+    "theme_color": "white",
+    "description": "Site intranet pour la gestion de la salle serveurs du lycée Sainte Famille Saintonge",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "logo_saintonge_512x512px.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purposse": "maskable"
+      }
+    ],
+    "name": "Saintonge Salle Serveurs",
+    "short_name": "Salle Serveurs",
+    "start_url": "/"
+  }
