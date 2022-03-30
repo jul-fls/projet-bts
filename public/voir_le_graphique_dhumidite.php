@@ -110,10 +110,10 @@
         }
     });
     date1 = new Date();
-    date1.setTime(date1.getTime() + (1*60*60*1000));
     date2 = new Date();
-    load_data_donnee(date2.toISOString().slice(0, 16),date1.toISOString().slice(0, 16));
-    document.getElementById('datetime1').value=date2.toISOString().slice(0, 16);
-    document.getElementById('datetime2').value=date1.toISOString().slice(0, 16);
+    date2.setTime(date1.getTime() - (1*60*60*1000));
+    load_data_donnee(toISOString(date2),toISOString(date1));
+    document.getElementById('datetime1').value=toISOString(date2);
+    document.getElementById('datetime2').value=toISOString(date1);
 </script>
 <?php require_once "commons/footer.php";?>

@@ -63,6 +63,7 @@
     <link rel="icon" href="<?=$__WEB_ROOT__?>resources/favicon.ico" />
     <link rel="apple-touch-icon" href="<?=$__WEB_ROOT__?>resources/logo_saintonge_512x512px.png">
     <link rel="manifest" href="<?=$__WEB_ROOT__?>resources/manifest.webmanifest" />
+    <script src="<?=$__WEB_ROOT__?>commons/script.js"></script>
 </head>
 
 <body>

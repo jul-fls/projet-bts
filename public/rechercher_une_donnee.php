@@ -110,8 +110,7 @@
         }
     }
     date = new Date();
-    date.setTime(date.getTime() + (1*60*60*1000));
-    load_data_donnee(date.toISOString().slice(0, 16));
-    document.getElementById('datetime').value=date.toISOString().slice(0, 16);
+    load_data_donnee(toISOString(date));
+    document.getElementById('datetime').value=toISOString(date);
 </script>
 <?php require_once "commons/footer.php";?>
