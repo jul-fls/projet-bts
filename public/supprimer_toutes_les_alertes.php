@@ -1,5 +1,4 @@
 <?php
-    // require_once "../show_errors.php";
     $title = "Supprimer toutes les alertes";
     require_once "commons/header.php";
     require "commons/dbconfig.php";

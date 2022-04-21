@@ -173,7 +173,7 @@
                 {
                     borderColor: "blue",
                     fill: false,
-                    label: "Humidité (%)",
+                    label: "Humidité (%HR)",
                 }
             ]
         },

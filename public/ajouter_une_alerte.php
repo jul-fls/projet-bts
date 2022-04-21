@@ -49,9 +49,9 @@
     </p>
     <p>
         <select id="type_de_donnees" class="w3-select full" name="type_de_donnees" required>
-            <option value="0" selected>Co2</option>
-            <option value="1">Température</option>
-            <option value="2">Humidité</option>
+            <option value="0" selected>Co2 (Ppm)</option>
+            <option value="1">Température (°C)</option>
+            <option value="2">Humidité (%HR)</option>
         </select>
         <label for="type_de_donnees">Type de données que cette alerte va devoir surveiller</label>
     </p>

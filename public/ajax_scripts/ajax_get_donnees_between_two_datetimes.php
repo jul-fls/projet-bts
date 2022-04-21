@@ -1,6 +1,5 @@
 <?php
     session_start();
-    // require_once "../../show_errors.php";
     if(isset($_SESSION['loggedin'])&&isset($_SESSION['role'])&&$_SESSION['role']>=0&&isset($_POST['datetime1'])&&isset($_POST['datetime2'])){
         require("../commons/dbconfig.php");
         $datetime1 = filter_var($_POST['datetime1'],FILTER_SANITIZE_STRING);

@@ -21,9 +21,9 @@
             <th>Mois</th>
             <th>Année</th>
             <th>Nombre de mesures</th>
-            <th>Moyenne CO²</th>
-            <th>Moyenne Température</th>
-            <th>Moyenne Humidité</th>
+            <th>Moyenne CO² (Ppm)</th>
+            <th>Moyenne Température (°C)</th>
+            <th>Moyenne Humidité (%HR)</th>
         </tr>
     </thead>
     <?php

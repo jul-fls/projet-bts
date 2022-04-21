@@ -1,5 +1,4 @@
 <?php
-    // require_once "../show_errors.php";
     $title = "Lister toutes les alertes";
     require_once "commons/header.php";
     if(!isset($_SESSION['loggedin'])){
@@ -42,11 +41,11 @@
                 echo '<td>'.$row['id'].'</td>'."\n";
                 echo '<td>'.$row['nom'].'</td>'."\n";
                 if($row['type_de_donnees']==0){
-                    echo '<td>Co2</td>'."\n";
+                    echo '<td>Co2 (Ppm)</td>'."\n";
                 }else if($row['type_de_donnees']==1){
-                    echo '<td>Température</td>'."\n";
+                    echo '<td>Température (°C)</td>'."\n";
                 }else if($row['type_de_donnees']==2){
-                    echo '<td>Humidité</td>'."\n";
+                    echo '<td>Humidité (%HR)</td>'."\n";
                 }
                 if($row['type_dalerte']==1){
                     echo '<td>En dessous</td>'."\n";

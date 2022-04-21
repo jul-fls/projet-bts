@@ -1,5 +1,4 @@
 <?php
-    require_once "../show_errors.php";
     $title = "Lister toutes les données du jour";
     require_once "commons/header.php";
     if(!isset($_SESSION['loggedin'])){
@@ -20,9 +19,9 @@
         <tr class="w3-blue">
             <th>N° de la donnée</th>
             <th>Heure de mesure</th>
-            <th>CO²</th>
-            <th>Température</th>
-            <th>Humidité</th>
+            <th>CO² (Ppm)</th>
+            <th>Température (°C)</th>
+            <th>Humidité (%HR)</th>
         </tr>
     </thead>
     <?php

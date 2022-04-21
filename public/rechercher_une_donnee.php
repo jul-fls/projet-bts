@@ -28,9 +28,9 @@
         <tr class="w3-blue">
             <th>N° de donnée</th>
             <th>Date et heure de la mesure</th>
-            <th>CO²</th>
-            <th>Température</th>
-            <th>Humidité</th>
+            <th>CO² (Ppm)</th>
+            <th>Température (°C)</th>
+            <th>Humidité (%HR)</th>
         </tr>
     </thead>
     <tbody>

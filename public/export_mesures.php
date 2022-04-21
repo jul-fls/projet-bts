@@ -15,7 +15,7 @@
         header('Content-Disposition: attachment; filename=export_mesures.csv');
         header("Content-Transfer-Encoding: UTF-8");
         $f = fopen('php://output', 'a');
-        $csv = "Mois,Année,Nombre de mesures,CO²,Température,Humidité\n";
+        $csv = "Mois,Année,Nombre de mesures,CO² (Ppm),Température (°C),Humidité (%HR)\n";
         fputs($f, $csv);
         $sql = 'SELECT DATE_FORMAT(donnees_capteurs.timestamp,\'%m\') AS mois, DATE_FORMAT(donnees_capteurs.timestamp,\'%Y\') AS annee, COUNT(*) AS nb_mesures, ROUND(AVG(donnees_capteurs.co2),0) AS co2_moy, ROUND(AVG(donnees_capteurs.temp),2) as temp_moy, ROUND(AVG(donnees_capteurs.hum),2) AS hum_moy FROM donnees_capteurs GROUP BY mois, annee;';
         $stmt = mysqli_prepare($conn,$sql);
