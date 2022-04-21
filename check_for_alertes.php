@@ -45,7 +45,7 @@
                     if($row['valeur_de_declenchement']>$co2){ //if co2 is lower than co2 alerte
                         //then send alert that co2 is lower than co2 alerte
                         $output = '<p>Bonjour,</p>';
-                        $output.= '<p>Le taux de Co2 actuel ('.$co2.') est inférieur à '.$row['valeur_de_declenchement'].', l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchéee.</p>';
+                        $output.= '<p>Le taux de Co2 actuel ('.$co2.') est inférieur à '.$row['valeur_de_declenchement'].' Ppm, l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchéee.</p>';
                         $output.= '<p>Pour votre information, vous avez la possibilité de consulter les données de la salle serveur sur <a href="'.$__WEB_ROOT__.'">'.$__WEB_ROOT__.'</a> en vous connectant à votre compte</p>';
                         $output.= '<p>Cordialement</p>';
                         $output.= '<p>L\'équipe Informatique du Lycée Sainte Famille Saintonge</p>';
@@ -67,7 +67,7 @@
                     if($row['valeur_de_declenchement']<$co2){ //if co2 is higher than co2 alerte
                         //send that co2 is higher than co2 alerte
                         $output = '<p>Bonjour,</p>';
-                        $output.= '<p>Le taux de Co2 actuel ('.$co2.') est supéieur à '.$row['valeur_de_declenchement'].', l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
+                        $output.= '<p>Le taux de Co2 actuel ('.$co2.') est supéieur à '.$row['valeur_de_declenchement'].' Ppm, l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
                         $output.= '<p>Pour votre information, vous avez la possibilité de consulter les données de la salle serveur sur <a href="'.$__WEB_ROOT__.'">'.$__WEB_ROOT__.'</a> en vous connectant à votre compte</p>';
                         $output.= '<p>Cordialement</p>';
                         $output.= '<p>L\'équipe Informatique du Lycée Sainte Famille Saintonge</p>';
@@ -91,7 +91,7 @@
                     if($row['valeur_de_declenchement']>$temp){ //if temperature is lower than temperature alerte
                         //send that temperature is lower than temperature alerte
                         $output = '<p>Bonjour,</p>';
-                        $output.= '<p>La température actuelle ('.$temp.') est inférieure à '.$row['valeur_de_declenchement'].', l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
+                        $output.= '<p>La température actuelle ('.$temp.') est inférieure à '.$row['valeur_de_declenchement'].' °C, l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
                         $output.= '<p>Pour votre information, vous avez la possibilité de consulter les données de la salle serveur sur <a href="'.$__WEB_ROOT__.'">'.$__WEB_ROOT__.'</a> en vous connectant à votre compte</p>';
                         $output.= '<p>Cordialement</p>';
                         $output.= '<p>L\'équipe Informatique du Lycée Sainte Famille Saintonge</p>';
@@ -113,7 +113,7 @@
                     if($row['valeur_de_declenchement']<$temp){ //if temperature is higher than temperature alerte
                         //send that temperature is higher than temperature alerte
                         $output = '<p>Bonjour,</p>';
-                        $output.= '<p>La température actuelle ('.$temp.') est supérieure à '.$row['valeur_de_declenchement'].', l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
+                        $output.= '<p>La température actuelle ('.$temp.') est supérieure à '.$row['valeur_de_declenchement'].'°C, l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
                         $output.= '<p>Pour votre information, vous avez la possibilité de consulter les données de la salle serveur sur <a href="'.$__WEB_ROOT__.'">'.$__WEB_ROOT__.'</a> en vous connectant à votre compte</p>';
                         $output.= '<p>Cordialement</p>';
                         $output.= '<p>L\'équipe Informatique du Lycée Sainte Famille Saintonge</p>';
@@ -137,7 +137,7 @@
                     if($row['valeur_de_declenchement']>$hum){ //if humidity is lower than humidity alerte
                         //send that humidity is lower than humidity alerte
                         $output = '<p>Bonjour,</p>';
-                        $output.= '<p>Le taux d\'humidité actuel ('.$hum.') est inférieur à '.$row['valeur_de_declenchement'].', l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
+                        $output.= '<p>Le taux d\'humidité actuel ('.$hum.') est inférieur à '.$row['valeur_de_declenchement'].' %HR, l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
                         $output.= '<p>Pour votre information, vous avez la possibilité de consulter les données de la salle serveur sur <a href="'.$__WEB_ROOT__.'">'.$__WEB_ROOT__.'</a> en vous connectant à votre compte</p>';
                         $output.= '<p>Cordialement</p>';
                         $output.= '<p>L\'équipe Informatique du Lycée Sainte Famille Saintonge</p>';
@@ -159,7 +159,7 @@
                     if($row['valeur_de_declenchement']<$hum){ //if humidity is higher than humidity alerte
                         //send that humidity is higher than humidity alerte
                         $output = '<p>Bonjour,</p>';
-                        $output.= '<p>Le taux d\'humidité actuel ('.$hum.') est supérieur à '.$row['valeur_de_declenchement'].', l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
+                        $output.= '<p>Le taux d\'humidité actuel ('.$hum.') est supérieur à '.$row['valeur_de_declenchement'].' %HR, l\'alerte '.html_entity_decode($row['nom'],ENT_QUOTES).' a donc été déclenchée.</p>';
                         $output.= '<p>Pour votre information, vous avez la possibilité de consulter les données de la salle serveur sur <a href="'.$__WEB_ROOT__.'">'.$__WEB_ROOT__.'</a> en vous connectant à votre compte</p>';
                         $output.= '<p>Cordialement</p>';
                         $output.= '<p>L\'équipe Informatique du Lycée Sainte Famille Saintonge</p>';
