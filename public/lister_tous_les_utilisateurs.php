@@ -121,5 +121,74 @@
     }else{
         document.getElementById('title').innerHTML = 'Liste des <b>'+$nb_utilisateurs+'</b> utilisateurs dont <b>'+$nb_isactive+'</b> sont activés';
     }
+    $th = document.getElementsByTagName('th');
+    for(i=0;i<$th.length;i++){
+        $th[i].name=$th[i].innerHTML;
+        $th[i].innerHTML += ' <i class="fa fa-sort"></i> ';
+        $th[i].addEventListener('click',function(){
+            sortTable(this.cellIndex);
+        });
+        $th[i].style.cursor = 'pointer';
+    }
+    function sortTable(n){
+        var table,rows,switching,i,x,y,shouldSwitch,dir,switchcount=0;
+        table=document.getElementsByTagName("table")[0];
+        switching=true;
+        dir="asc"; 
+        while(switching){
+            switching=false;
+            rows=table.rows;
+            for(i=1;i<(rows.length-1);i++){
+                shouldSwitch=false;
+                x=rows[i].getElementsByTagName("td")[n];
+                y=rows[i+1].getElementsByTagName("td")[n];
+                typeofdata=0;
+                if(!isNaN(parseFloat(x.innerHTML))){
+                    typeofdata = 1;
+                }else{
+                    typeofdata = 0;
+                }
+                if(typeofdata==1){
+                    if(dir=="asc"){
+                        if(parseFloat(x.innerHTML)>parseFloat(y.innerHTML)){
+                            shouldSwitch=true;
+                            rows[0].getElementsByTagName("th")[n].innerHTML = rows[0].getElementsByTagName("th")[n].name + ' <i class="fa fa-sort-numeric-asc"></i>';
+                            break;
+                        }
+                    }else if(dir=="desc"){
+                        if(parseFloat(x.innerHTML)<parseFloat(y.innerHTML)){
+                            shouldSwitch=true;
+                            rows[0].getElementsByTagName("th")[n].innerHTML = rows[0].getElementsByTagName("th")[n].name + ' <i class="fa fa-sort-numeric-desc"></i>';
+                            break;
+                        }
+                    }
+                }else if(typeofdata==0){
+                    if(dir=="asc"){
+                        if(x.innerHTML.toLowerCase()>y.innerHTML.toLowerCase()){
+                            shouldSwitch=true;
+                            rows[0].getElementsByTagName("th")[n].innerHTML = rows[0].getElementsByTagName("th")[n].name + ' <i class="fa fa-sort-alpha-asc"></i>';
+                            break;
+                        }
+                    }else if(dir=="desc"){
+                        if(x.innerHTML.toLowerCase()<y.innerHTML.toLowerCase()){
+                            shouldSwitch=true;
+                            rows[0].getElementsByTagName("th")[n].innerHTML = rows[0].getElementsByTagName("th")[n].name + ' <i class="fa fa-sort-alpha-desc"></i>';
+                            break;
+                        }
+                    }
+                }
+            }
+            if(shouldSwitch){
+                rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
+                switching=true;
+                switchcount++;      
+            }else{
+                if(switchcount==0&&dir=="asc"){
+                    dir="desc";
+                    switching=true;
+                }
+            }
+        }
+    }
 </script>
 <?php require_once "commons/footer.php";?>
