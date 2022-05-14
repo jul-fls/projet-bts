@@ -1,6 +1,6 @@
 <?php 
-    $title = "RGPD";
-    require_once "commons/header.php";
+    $title = "RGPD"; //Titre de la page
+    require_once "commons/header.php"; //Inclusion du header
 ?>
 <div class="w3-container w3-card">
     <h2>
@@ -196,8 +196,8 @@
         </li>
     </ul>
     <p>
-        <button id="open_cookies_preferences" style="text-transform: uppercase;color: rgb(162, 153, 141);background-color: transparent;border-color: rgb(79, 86, 89);outline-color: initial;border: 1px solid #8C8E93;border-radius: 4px;padding: 8px 10px 8px 10px;cursor: pointer;outline: 0;font-weight: bold;">Modifier mes préférences</button> 
+        <button id="open_cookies_preferences" style="text-transform: uppercase;color: rgb(162, 153, 141);background-color: transparent;border-color: rgb(79, 86, 89);outline-color: initial;border: 1px solid #8C8E93;border-radius: 4px;padding: 8px 10px 8px 10px;cursor: pointer;outline: 0;font-weight: bold;">Modifier mes préférences</button> <!-- Bouton pour modifier ses préférences de cookies -->
     </p>
     <br/>
 </div>
-<?php require "commons/footer.php"; ?>
+<?php require "commons/footer.php"; ?> <!-- Footer -->

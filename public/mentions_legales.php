@@ -1,8 +1,8 @@
 <?php
-    $title = "Mentions légales";
-    require_once "commons/header.php";
+    $title = "Mentions légales"; // Titre de la page
+    require_once "commons/header.php"; // Inclusion du fichier d'en-tête
 ?>
-<div class="w3-container w3-card">
+<div class="w3-container w3-card"> <!-- Début du bloc -->
     <h3>
         1. Présentation du site internet
     </h3>
@@ -344,8 +344,8 @@
         </li>
     </ul>
     <p>
-        <button id="open_cookies_preferences" style="text-transform: uppercase;color: rgb(162, 153, 141);background-color: transparent;border-color: rgb(79, 86, 89);outline-color: initial;border: 1px solid #8C8E93;border-radius: 4px;padding: 8px 10px 8px 10px;cursor: pointer;outline: 0;font-weight: bold;">Modifier mes préférences</button> 
+        <button id="open_cookies_preferences" style="text-transform: uppercase;color: rgb(162, 153, 141);background-color: transparent;border-color: rgb(79, 86, 89);outline-color: initial;border: 1px solid #8C8E93;border-radius: 4px;padding: 8px 10px 8px 10px;cursor: pointer;outline: 0;font-weight: bold;">Modifier mes préférences</button> <!-- Bouton pour modifier ses préférences de cookies  -->
     </p>
     <br/>
 </div>
-<?php require "commons/footer.php"; ?>
+<?php require "commons/footer.php"; ?> <!-- Footer du site -->
