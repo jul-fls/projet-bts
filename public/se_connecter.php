@@ -68,11 +68,11 @@
 <div class="login"> <!-- Début de la div login -->
 	<h1>Connexion</h1> <!-- Titre de la page -->
 	<form action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post"> <!-- Début du formulaire -->
-		<label for="login"> Login : </label> <!-- Label du champ login -->
+		<label for="login"> <!-- Label du champ login -->
 			<i class="fas fa-user"></i> <!-- icone du champ login -->
 		</label> <!-- Fin du label du champ login -->
 		<input type="text" name="login" placeholder="Identifiant..." id="login" required> <!-- Champ login -->
-		<label for="password"> Mot de passe : </label> <!-- Label du champ mot de passe -->
+		<label for="password"> <!-- Label du champ mot de passe -->
 			<i class="fas fa-lock"></i> <!-- icone du champ mot de passe -->
 		</label> <!-- Champ mot de passe -->
 		<input type="password" name="password" placeholder="Mot de passe..." id="password" required> <!-- Champ mot de passe -->
